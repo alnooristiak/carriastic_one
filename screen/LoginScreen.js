@@ -1,4 +1,4 @@
-import { Image, StyleSheet, Text, TextInput, View } from "react-native";
+import { Button, Image, StyleSheet, Text, TextInput, View } from "react-native";
 import React from "react";
 import { Entypo } from "@expo/vector-icons";
 import { FontAwesome } from "@expo/vector-icons";
@@ -15,7 +15,7 @@ const LoginScreen = () => {
       <View style={[styles.userInputSec]}>
         <View style={ styles.shadowProp}>
         <Image
-          style={styles.logoSection}
+          style={styles.boyImage}
           source={require("../assets/images/cuteboy.png")}
         />
 
@@ -28,6 +28,9 @@ const LoginScreen = () => {
           <FontAwesome name="lock" size={24} color="black" />
           <TextInput placeholder="Password" />
         </View>
+
+        <Button title="Login" color="#8e44ad" style={styles.loginButton} />
+
         </View>
       </View>
     </View>
@@ -44,7 +47,19 @@ const styles = StyleSheet.create({
     marginTop: 25,
     marginBottom: 20,
   },
+  boyImage: {
+    width: 120,
+    height: 120,
+    padding: 12,
+    borderRadius: 60,
+    borderWidth: 1,
+    borderColor: 'green',
+    top: 10,
+    position: 'absolute',
+    // marginBottom: 20
+  },
   userInputSec: {
+    position: 'relative',
     justifyContent: "center",
     alignItems: "center",
     shadowColor: "#c12929",
@@ -76,4 +91,12 @@ elevation: 4
   inputDiv: {
     width: "90%",
   },
+  loginButton: {
+    width: '100%',
+    margin: 8,
+    justifyContent: 'center',
+    alignItems: 'center',
+    color: 'white',
+    backgroundColor: '#8e44ad'
+  }
 });
