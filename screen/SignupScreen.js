@@ -10,8 +10,10 @@ import {
 } from "react-native";
 import React from "react";
 import { FontAwesome } from "@expo/vector-icons";
+import { FontAwesome5 } from "@expo/vector-icons";
+import { MaterialIcons } from "@expo/vector-icons";
 
-const SignupScreen = ({ navigation  }) => {
+const SignupScreen = ({ navigation }) => {
   return (
     <ScrollView>
       <Image
@@ -30,8 +32,8 @@ const SignupScreen = ({ navigation  }) => {
             <View style={styles.inputComponent}>
               <FontAwesome
                 style={styles.iconSec}
-                name="lock"
-                size={24}
+                name="user-circle-o"
+                size={20}
                 color="black"
               />
               <TextInput style={styles.inputDiv} placeholder="Name" />
@@ -48,20 +50,20 @@ const SignupScreen = ({ navigation  }) => {
             </View>
             {/* designition */}
             <View style={styles.inputComponent}>
-              <FontAwesome
+              <FontAwesome5
                 style={styles.iconSec}
-                name="lock"
-                size={24}
+                name="id-card-alt"
+                size={18}
                 color="black"
               />
               <TextInput style={styles.inputDiv} placeholder="Designition" />
             </View>
             {/* Employe ID */}
             <View style={styles.inputComponent}>
-              <FontAwesome
+              <FontAwesome5
                 style={styles.iconSec}
-                name="lock"
-                size={24}
+                name="id-card"
+                size={18}
                 color="black"
               />
               <TextInput style={styles.inputDiv} placeholder="Employe ID" />
@@ -91,10 +93,10 @@ const SignupScreen = ({ navigation  }) => {
             </View>
             {/* Upload Photo */}
             <View style={[styles.inputComponent, styles.inputLast]}>
-              <FontAwesome
+              <MaterialIcons
+                name="add-a-photo"
+                size={20}
                 style={styles.iconSec}
-                name="lock"
-                size={24}
                 color="black"
               />
               <TextInput style={styles.inputDiv} placeholder="Upload Photo" />
@@ -112,9 +114,7 @@ const SignupScreen = ({ navigation  }) => {
       {/* navigate page linking section */}
       <View style={styles.navigateSec}>
         <Text style={styles.longText}>Already have an account? </Text>
-        <Pressable
-        onPress={() => navigation.navigate('LoginScreen')}
-        >
+        <Pressable onPress={() => navigation.navigate("LoginScreen")}>
           <Text style={[styles.longText, styles.loginText]}>LOGIN</Text>
         </Pressable>
       </View>
@@ -140,7 +140,7 @@ const styles = StyleSheet.create({
     alignSelf: "center",
     justifyContent: "center",
     alignItems: "center",
-    overflow: 'visible',
+    overflow: "visible",
   },
   mainBgContainer: {
     backgroundColor: "#8e44ad",
@@ -148,7 +148,7 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     justifyContent: "center",
     alignItems: "center",
-    position: 'relative',
+    position: "relative",
   },
   signUpText: {
     color: "white",
@@ -176,7 +176,7 @@ const styles = StyleSheet.create({
     width: "90%",
   },
   inputLast: {
-    marginBottom: 35,
+    marginBottom: 50,
   },
 
   // navigate section
@@ -184,7 +184,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "center",
-    marginTop: 25,
+    marginTop: 55,
   },
   longText: {
     fontSize: 18,
@@ -198,19 +198,19 @@ const styles = StyleSheet.create({
   // sign up btn section
   signUpBtn: {
     borderRadius: 7,
-    backgroundColor: 'white',
+    backgroundColor: "white",
     padding: 10,
-    width: '50%',
-    position: 'absolute',
+    width: "50%",
+    position: "absolute",
     bottom: -20,
-    borderColor: 'black',
+    borderColor: "black",
     borderWidth: 1,
-    overflow: 'visible',
+    overflow: "visible",
   },
   signUpText: {
-    textAlign: 'center',
-    color: '#8e44ad',
+    textAlign: "center",
+    color: "#8e44ad",
     fontSize: 17,
-    fontWeight: 'bold'
-  }
+    fontWeight: "bold",
+  },
 });
